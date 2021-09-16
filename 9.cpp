@@ -43,7 +43,7 @@ void print(vector<int> vec)
 }
 int main()
 {
-    vector<vector<int>> vec = {{1,10,4,2},{9,3,8,7},{15,16,17,12}};
+    vector<vector<int>> vec = {{1,2,3},{4,5,6},{7,8,9}};
     print(luckyNumbers(vec));
 
     return 0;
