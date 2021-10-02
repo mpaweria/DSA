@@ -22,7 +22,7 @@ int main()
 
         if(term%2==0)
         {
-            sum+=term;
+            sum = sum + term;
         }
     }
     cout << sum;
