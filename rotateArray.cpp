@@ -42,7 +42,7 @@ int main()
 
 // another approach
 
-// k=k%nums.size(); 
+// k=k%nums.size();         // if k is 8 and n is 5, so when k=n, the array will become the same again, that's why mod is taken.
 //     if(k==0) return nums;
         
 //     reverse(nums.begin(),nums.end());
