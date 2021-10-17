@@ -1,1 +1,3 @@
-z
+
+            //     sum+=arr[i];
+            // else {
