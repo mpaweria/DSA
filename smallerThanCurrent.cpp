@@ -1,27 +1,29 @@
-// https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+//  https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-    vector<int> smallnums; 
+    vector<int> vec;
+    int count;
     for(int i=0; i<nums.size(); i++)
     {
-        int count = 0;
+        count = 0;
         for(int j=0; j<nums.size(); j++)
         {
-            if(nums[i]>nums[j])
+            if(i!=j && nums[i] > nums[j])
                 count++;
         }
-        smallnums.push_back(count);
-    }        
-    return smallnums;
-}
+        vec.push_back(count);
+    }
 
+    return vec;
+}
 int main()
 {
-    vector<int> vec = {7,7,7,7}, ans = smallerNumbersThanCurrent(vec);
+    vector<int> vec = {7,1,5,2,3}, ans = smallerNumbersThanCurrent(vec);
 
     for(auto i: ans)
     { 
