@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-good-pairs/
+//  https://leetcode.com/problems/number-of-good-pairs/
 
 #include<iostream>
 #include<vector>
@@ -18,7 +18,7 @@ int numIdenticalPairs(vector<int>& nums) {
 }
 int main()
 {
-    vector<int> vec = {1,2,3};
+    vector<int> vec = {1,2,3,1,2,4};
     cout << numIdenticalPairs(vec);
 
     return 0;

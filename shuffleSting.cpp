@@ -1,19 +1,17 @@
-// https://leetcode.com/problems/shuffle-string/
+//  https://leetcode.com/problems/shuffle-string/
 
 #include<iostream>
-#include<string>
 #include<vector>
 using namespace std;
 
 string restoreString(string s, vector<int>& indices) {
     string str = s;
-    for(int i=0; i<indices.size(); i++)
+    for(int i=0; i<s.length(); i++)        
     {
-        str[indices[i]] = s[i];     
-    }    
+        str[indices[i]] = s[i];
+    }
     return str;
 }
-
 int main()
 {
     string s = "codeleet";
