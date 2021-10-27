@@ -1,15 +1,22 @@
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int row=matrix.size(), col=matrix[0].size();
-
-    int i=0, j=col-1;
-    while(j>=0 && i<row)
+int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
+    int count=0;
+    for(int i=0; i<items.size(); i++)
     {
-        if(matrix[i][j]==target)
-            return true;
-        else if(matrix[i][j]<target)
-            i++;
+        if(ruleKey == "type")
+        {
+            if(items[i][0]==ruleValue)
+                count++;
+        }
+        else if(ruleKey == "color")
+        {
+            if(items[i][1]==ruleValue)
+                count++;
+        }
         else
-            j--;
-    }
-    return false;
+        {
+            if(items[i][2]==ruleValue)
+                count++;
+        }
+    }       
+    return count; 
 }
