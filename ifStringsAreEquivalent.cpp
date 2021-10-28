@@ -2,20 +2,19 @@
 
 #include<iostream>
 #include<vector>
-#include<string>
 using namespace std;
 
 bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
-    string compWord1, compWord2;
+    string str1, str2;
     for(int i=0; i<word1.size(); i++)
     {
-        compWord1+=word1[i];
-    }
+        str1 += word1[i];
+    } 
     for(int i=0; i<word2.size(); i++)
     {
-        compWord2+=word2[i];
-    }
-    if(compWord1 == compWord2)
+        str2 += word2[i];
+    }    
+    if(str1 == str2)
         return true;
     else
         return false;
