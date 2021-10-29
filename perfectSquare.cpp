@@ -4,22 +4,22 @@
 using namespace std;
 
 bool isPerfectSquare(int num) {
-    int start=1, end=num, mid;
-    while (start<=end)
+    int s=0, e=num;
+    while(s<=e)
     {
-        mid = start + (end-start)/2;
+        long long int mid = (s+e)/2;
         if(mid*mid == num)
             return true;
         else if(mid*mid < num)
-            start = mid + 1;
+            s = mid+1;
         else
-            end = mid - 1;
+            e = mid-1;
     }
     return false;
 }
 int main()
 {
-    cout << isPerfectSquare(16);
+    cout << isPerfectSquare(121);
 
     return 0;
 }
