@@ -1,16 +1,15 @@
 //  https://leetcode.com/problems/jewels-and-stones/
 
 #include<iostream>
-#include<string>
 using namespace std;
 
 int numJewelsInStones(string jewels, string stones) {
     int count=0;
-    for(int i=0; i<jewels.size(); i++)
+    for(int i=0; i<jewels.length(); i++)
     {
-        for(int j=0; j<stones.size(); j++)
+        for(int j=0; j<stones.length(); j++)
         {
-            if(jewels[i]==stones[j])
+            if(jewels[i] == stones[j])
                 count++;
         }
     }

@@ -1,7 +1,6 @@
 //  https://leetcode.com/problems/defanging-an-ip-address/
 
 #include<iostream>
-#include<string>
 using namespace std;
 
 string defangIPaddr(string address) {
@@ -10,13 +9,13 @@ string defangIPaddr(string address) {
     {
         if(address[i] == '.')
         {
-            add += '[';
-            add += '.';
-            add += ']';
+            add.push_back('[');
+            add.push_back('.');
+            add.push_back(']');
         }
         else
-            add+=address[i];
-    }        
+            add.push_back(address[i]);
+    }
     return add;
 }
 int main()
