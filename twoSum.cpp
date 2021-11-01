@@ -20,15 +20,18 @@ vector<int> twoSum(vector<int>& nums, int target) {
     }        
     return ans;
 }
+void printArray (vector<int> vec) {
+    for(auto v: vec)
+    {
+        cout << v << " ";
+    }
+}
 int main()
 {
     int num = 9;
-    vector<int> vec = {2,7,11,15}, ans=twoSum(vec, num);
+    vector<int> vec = {2,7,11,15};
 
-    for(auto v: ans)
-    {
-        cout << v;
-    }
+    printArray(twoSum(vec, num));
 
     return 0;
 }
